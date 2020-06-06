@@ -1,0 +1,215 @@
+// variebels
+    maincolor = #141526
+    titlecolor = darkgray 
+    basiccolor = white
+    hovercolor = #26bfca
+    linearcolor = linear-gradient(to right, #007ccb , #00d27e)
+    centerback =  black
+
+
+    border()
+        border 1px solid #fff
+        border-radius: 20px
+
+*
+    padding 0
+    margin 0
+    font-family  'Rubik', sans-serif
+    box-sizing border-box
+    background-color: maincolor
+
+
+
+body
+    display: flex
+    flex-direction row
+    margin 0 0 30px 10px
+    width 100%
+    height 100%
+// left
+    .left
+        flex 1
+        display flex
+        flex-direction column
+        justify-content space-between
+        padding-top 70px
+        margin-right 20px
+        .icons
+            display flex
+            color basiccolor
+            margin 50px 20px
+            .icon
+                text-align center
+                margin 0 20px
+                border border
+                padding 20px
+                flex 1
+                &:hover
+                    color hovercolor
+                i 
+                    font-size 30px
+                    margin-bottom 20px
+        .firstbtn
+            background-image linearcolor
+            padding 10px 0
+            border border
+            transition .3s
+            &:hover
+                border-color black
+        .library
+            display flex
+            flex 1
+            flex-direction column
+            justify-content space-between
+            .library-title
+                display flex
+                color titlecolor
+                font-size 1.2rem
+                padding 20px
+                justify-content space-between
+                i 
+                    // justify-content flex-end
+            ul
+                margin 20px
+                list-style none
+                color basiccolor
+                font-size 1.2rem
+                li
+                    margin 10px
+    // center
+    .center 
+        flex 3
+        display flex
+        flex-direction column
+        border-left 1px solid #fff
+        // background-color black
+        // position absolut
+        // background-size cover
+        .header
+            color titlecolor
+            font-size 1.2rem
+            flex 4
+            // background black
+            // background-size cover
+            .title
+                display flex
+                flex-direction row
+                margin 10px 20px
+                justify-content: space-between
+            input 
+                border border
+                font-size 20px
+                color maincolor
+                font-weight bolder
+                padding 10px 10px
+                background linearcolor
+                flex-basis 100px
+                transition .5s
+                &:hover
+                    color #fff
+                // margin 0 200px
+            i 
+                font-size 35px
+                &:hover
+                    color gray
+                // flex 1
+        .btns
+            display flex
+            flex-direction row
+            flex 1
+            margin-top 200px
+            justify-content space-around
+            a
+                padding 15px
+                color basiccolor
+                margin 0 10px
+                text-decoration none 
+                border-radius 30px
+                align-content center
+                &:hover
+                    background-color maincolor
+                    font-weight bolder
+            .rightbtn
+                i 
+                    font-size 40px
+                    transition .3s
+                    &:hover
+                        color gray
+            .centerbtn
+                a
+                    border border
+                    background-color black
+        .down
+            display flex
+            flex-direction row
+            flex 3
+            .down-left,.down-center,.down-right
+                display flex
+                flex-direction column
+                flex 1
+                .ul-title
+                    color titlecolor
+                    font-size 30px
+                    margin 30px
+                li
+                    display flex
+                    flex-direction row
+                    margin-top 20px
+                    color white
+                    font-size 17px
+                    p
+                        flex 10
+                    i 
+                        flex 1
+                        margin 0 30px
+    // right
+    .right
+        flex 1
+        -webkit-scrollbar width 10px
+        display flex
+        flex-direction column       
+        border-left 1px solid #fff
+        .friends
+            overflow auto
+            height 900px
+        .friend-title
+            color titlecolor
+            font-size 1.3rem
+            margin 20px
+        a
+            text-decoration none
+            display flex
+            flex-direction row
+            color #fff
+            margin 50px 30px
+            transition .3s
+
+            &:hover
+                margin-left 50px
+            i 
+                // flex 1
+                border 1px solid gray
+                border-radius 50%
+                font-size 25px
+                padding 15px
+                background darkgray 
+                &:hover
+                    background gray
+            p
+                // flex 4
+                font-size 25px
+                padding 15px
+
+@media only screen and (max-width: 800px)
+    body
+        flex-direction column
+    .right
+        display none
+    .left
+        justify-content flex-end
+    .center
+        flex top 
+@media only screen and (max-width: 1800px)
+    .right
+        display none
+        // flex 2
